@@ -60,7 +60,50 @@ MAX_YEARLIES=5
 MAX_RANDOMS=5
 ```
 
-## Crontab usage
+## Examples
+
+### Cli usage
+
+```
+$ thwapback.sh info
+daily-1691583424                     Wed, 2023-08-09 05:17:13 [43f8ff2366e4dfa83bb510e91bf4fe462520a2e275e379afaae7bbc91f3d8f17]
+hourly-1691586001                    Wed, 2023-08-09 06:00:06 [79723b3e41c8b7b85766c7820a1f8548ce97e7fa29c705288f527b0e4d7ad129]
+------------------------------------------------------------------------------
+Repository ID: bdbeb48d8ff22cf02ec9dd6cb064e7574ce9c27c10e4fca9578c17eaeac5a3d1
+Location: ...
+Encrypted: Yes (key file)
+Key file: ....25
+Cache: .../.cache/borg/bdbeb48d8ff22cf02ec9dd6cb064e7574ce9c27c10e4fca9578c17eaeac5a3d1
+Security dir: .../.config/borg/security/bdbeb48d8ff22cf02ec9dd6cb064e7574ce9c27c10e4fca9578c17eaeac5a3d1
+------------------------------------------------------------------------------
+                       Original size      Compressed size    Deduplicated size
+All archives:               58.02 GB             48.49 GB             22.50 GB
+
+                       Unique chunks         Total chunks
+Chunk index:                  125759               304655
+
+$ thwapback.sh
+>> Creating backup tag: random-1691587500
+------------------------------------------------------------------------------
+Repository: ...
+Archive name: random-1691587500
+Archive fingerprint: 159c20e68c55024d72e46428b02e3c880deb5e9faa6c8039bfa5ce7d82e127a1
+Time (start): Wed, 2023-08-09 06:25:05
+Time (end):   Wed, 2023-08-09 06:25:17
+Duration: 11.80 seconds
+Number of files: 143060
+Utilization of max. archive size: 0%
+------------------------------------------------------------------------------
+                       Original size      Compressed size    Deduplicated size
+This archive:               29.01 GB             24.25 GB              7.40 MB
+All archives:               87.03 GB             72.74 GB             22.51 GB
+
+                       Unique chunks         Total chunks
+Chunk index:                  125840               457036
+------------------------------------------------------------------------------
+```
+
+### Crontab usage
 
 Thwapback uses the config file located at `${HOME}/.thwapback` by default, this
 is pretty straightforward, and allows multiple configurations to be specified.

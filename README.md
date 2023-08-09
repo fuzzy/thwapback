@@ -121,5 +121,5 @@ PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 10 0 * * * thwapback.sh daily
 20 0 * * 0 thwapback.sh weekly
 30 0 1 * * thwapback.sh monthly
-40 0 1 1 * TB_CONFIG_FILE=/etc/thwapback/yearly.config thwapback.sh yearly
+40 0 1 1 * THWAPBACK_CONFIG=/etc/thwapback/yearly.config thwapback.sh yearly
 ```

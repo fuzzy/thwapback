@@ -2,7 +2,7 @@
 #set -x
 
 # This will grab our configuration from a file instead of the environment. Cron works better this way
-CONFIG_FILE=${TBKUP_CONFIG_FILE:="${HOME}/.thwapback"}
+CONFIG_FILE=${TB_CONFIG_FILE:="${HOME}/.thwapback"}
 if test -e ${CONFIG_FILE}; then
     source ${CONFIG_FILE}
 elif test ! -e ${CONFIG_FILE} && test "${1}" != "install"; then

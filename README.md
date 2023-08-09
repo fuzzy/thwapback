@@ -117,9 +117,9 @@ USER=fuzzy
 PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 
 # The THWAP backup jobs
-0  * * * * /home/fuzzy/.local/bin/backup.sh hourly
-10 0 * * * /home/fuzzy/.local/bin/backup.sh daily
-20 0 * * 0 /home/fuzzy/.local/bin/backup.sh weekly
-30 0 1 * * /home/fuzzy/.local/bin/backup.sh monthly
-40 0 1 1 * /home/fuzzy/.local/bin/backup.sh yearly
+0  * * * * thwapback.sh hourly
+10 0 * * * thwapback.sh daily
+20 0 * * 0 thwapback.sh weekly
+30 0 1 * * thwapback.sh monthly
+40 0 1 1 * TB_CONFIG_FILE=/etc/thwapback/yearly.config thwapback.sh yearly
 ```
